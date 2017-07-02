@@ -64,6 +64,17 @@ class Coverflow extends Component {
     }
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    const { onActiveChange } = this.props;
+    if (onActiveChange) {
+      const currentActive = this.state.current;
+      const nextActive = nextState.current;
+      if (currentActive !== nextActive) {
+        onActiveChange(nextActive, currentActive);
+      }
+    }
+  }
+
   componentWillUnmount() {
     let length = React.Children.count(this.props.children);
 
@@ -319,7 +330,8 @@ Coverflow.propTypes = {
   navigation: PropTypes.bool,
   enableHeading: PropTypes.bool,
   enableScroll: PropTypes.bool,
-  active: PropTypes.number
+  active: PropTypes.number,
+  onActiveChange: PropTypes.func
 };
 
 Coverflow.defaultProps = {

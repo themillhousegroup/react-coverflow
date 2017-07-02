@@ -114,6 +114,7 @@ class Container extends Component {
           navigation={true}
           enableHeading={false}
           active={this.state.active}
+          onActiveChange={this._displayActive.bind(this)}
           >
           <img src='images/album-1.png' alt='Album one' data-action={fn} />
           <img src='images/album-2.png' alt='Album two' data-action="http://passer.cc"/>
@@ -137,6 +138,10 @@ class Container extends Component {
     this.setState({
       active: num
     });
+  }
+
+  _displayActive(newActive, previousActive) {
+    console.log('Active has changed from: ' + previousActive + ' to: ' + newActive);
   }
 };
 
