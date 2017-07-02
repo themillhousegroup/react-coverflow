@@ -132,8 +132,8 @@ class Container extends Component {
   }
 
   _handleClick() {
-    console.log('go');
-    var num = Math.floor((Math.random() * 10) + 1);
+    var num = Math.floor((Math.random() * 10));
+    console.log('go', num);
     this.setState({
       active: num
     });
