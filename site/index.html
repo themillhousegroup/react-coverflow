@@ -109,10 +109,14 @@
 
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3>Support set active outside</h3>
+        <h3>Support setting `active` externally</h3>
 
         <p class="text-muted">
           You can use `state` to specify active now.
+        </p>
+        <p class="text-muted">
+          You can also supply an `onActiveChange(newValue, previousValue)` function which will be called
+          whenever the `active` or `current` value changes, whether from an external update or internally (e.g. scroll wheel).
         </p>
       </div>
     </div>
