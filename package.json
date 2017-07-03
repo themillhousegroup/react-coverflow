@@ -1,6 +1,6 @@
 {
   "name": "react-coverflow-themillhousegroup",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Carousel of coverflow effect",
   "main": "main.js",
   "scripts": {
