@@ -59,7 +59,9 @@ class Coverflow extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.active !== nextProps.active) {
+    let length = React.Children.count(this.props.children);
+    let newLength = React.Children.count(nextProps.children);
+    if ((this.props.active !== nextProps.active) || (length !== newLength)) {
       this.updateDimensions(nextProps.active);
     }
   }
