@@ -1,8 +1,8 @@
 React Coverflow
 ===
-[![npm version](https://badge.fury.io/js/react-coverflow.svg)](http://badge.fury.io/js/react-coverflow)
+[![npm version](https://badge.fury.io/js/react-coverflow-themillhousegroup.svg)](http://badge.fury.io/js/react-coverflow-themillhousegroup)
 
-[![NPM](https://nodei.co/npm/react-coverflow.png)](https://nodei.co/npm/react-coverflow/)
+[![NPM](https://nodei.co/npm/react-coverflow-themillhousegroup.png)](https://nodei.co/npm/react-coverflow-themillhousegroup/)
 
 ---
 
@@ -18,12 +18,17 @@ Features of `react-coverflow`
 * Using css-module
 * Support mobile
 
+Features of this fork:
+* Correctly handle setting the 'active' cover index to `0` (fixes [issue #31](https://github.com/andyyou/react-coverflow/issues/31) )
+* Added an `onActiveChange(nextActive, currentActive)` callback to notify when the active cover index changes
+* Fixed issues with redrawing when the number of covers is dynamically changed
+
 ## Getting started
 
-Install `react-coverflow` using npm.
+Install `react-coverflow-themillhousegroup` using npm.
 
 ```
-$ npm install react-coverflow
+$ npm install react-coverflow-themillhousegroup
 ```
 
 The required stylesheet using `css-module` and include in package(js file), so you don't need include other stylesheet.
@@ -33,7 +38,7 @@ The required stylesheet using `css-module` and include in package(js file), so y
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Coverflow from 'react-coverflow';
+import Coverflow from 'react-coverflow-themillhousegroup';
 
 const fn = function () {
   /* do your action */
@@ -153,6 +158,11 @@ $ npm publish
 ```
 
 ## Release History
+* 2017-07-02
+  - Version `0.3.2` fixes centering when number of children changes
+  - Version `0.3.1` invoke a redraw when number of children changes
+* 2017-07-01
+  - Version `0.3.0` forked from [React-Coverflow](https://github.com/andyyou/react-coverflow) to fix setting `active` to `0`
 * 2016-09-29
   - Add `clickable` props to on/off click of image.
 * 2016-09-22
