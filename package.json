@@ -1,6 +1,6 @@
 {
   "name": "react-coverflow-themillhousegroup",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Carousel of coverflow effect",
   "main": "main.js",
   "scripts": {
@@ -27,7 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "radium": "^0.18.0"
+    "radium": "^0.19.1"
   },
   "peerDependencies": {
     "react": "^15.3.1",

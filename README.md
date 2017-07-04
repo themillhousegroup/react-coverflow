@@ -158,6 +158,8 @@ $ npm publish
 ```
 
 ## Release History
+* 2017-07-04
+  - Version `0.3.3` moves to `radium` version `0.19.1` to fix `PropTypes` warnings 
 * 2017-07-02
   - Version `0.3.2` fixes centering when number of children changes
   - Version `0.3.1` invoke a redraw when number of children changes
