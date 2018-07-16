@@ -253,7 +253,7 @@ class Coverflow extends Component {
     let current = this.state.current;
     let baseWidth = width / (displayQuantityOfSide * 2 + 1);
     let length = React.Children.count(this.props.children);
-    let distance = this._center() - (current - 1);
+    let distance = this._center(length) - (current - 1);
     let move = distance * baseWidth;
 
     if (current - 1 >= 0) {
@@ -268,7 +268,7 @@ class Coverflow extends Component {
     let current = this.state.current;
     let baseWidth = width / (displayQuantityOfSide * 2 + 1);
     let length = React.Children.count(this.props.children);
-    let distance = this._center() - (current + 1);
+    let distance = this._center(length) - (current + 1);
     let move = distance * baseWidth;
 
     if (current + 1 < length) {
